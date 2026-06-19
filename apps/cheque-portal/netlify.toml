@@ -1,0 +1,9 @@
+[build]
+  command   = "npx turbo build --filter=cheque-portal"
+  publish   = "apps/cheque-portal/dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[build.ignore]
+  command = "git diff --quiet HEAD^ HEAD -- apps/cheque-portal/ packages/"
