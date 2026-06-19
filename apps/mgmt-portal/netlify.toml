@@ -1,9 +1,7 @@
 [build]
   command   = "npx turbo build --filter=mgmt-portal"
   publish   = "apps/mgmt-portal/dist"
+  ignore  = "git diff --quiet HEAD^ HEAD -- apps/mgmt-portal/ packages/"
 
 [build.environment]
-  NODE_VERSION = "20"
-
-[build.ignore]
-  command = "git diff --quiet HEAD^ HEAD -- apps/mgmt-portal/ packages/"
+  NODE_VERSION = "22"
